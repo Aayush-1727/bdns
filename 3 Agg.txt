@@ -1,0 +1,75 @@
+0.delete all b4 start 
+db.col.deleteMany({})
+
+1. Aggregate many
+db.Aggregate.insertMany([
+  {Name:"Aayush", Age:20, City:"Mumbai", Salary:20000},
+  {Name:"Tanu", Age:21, City:"Thane", Salary:25000},
+  {Name:"Ravi", Age:22, City:"Mumbai", Salary:30000},
+  {Name:"Ajay", Age:20, City:"Kurla", Salary:18000},
+  {Name:"Hatim", Age:23, City:"Thane", Salary:22000}
+])
+
+2. Find
+db.Aggregate.find()
+
+3. count
+db.col.aggregate([
+  {
+    $group: {
+      _id: "$City",
+      cityCount: {$sum: 1}
+    }
+  }
+])
+
+4. sum function
+db.col.aggregate([
+  {
+    $group: {
+      _id: "$City",
+      cityCount: {$sum: "$Salary"}
+    }
+  }
+])
+
+5. avg fun
+db.col.aggregate([
+  {
+    $group: {
+      _id: "$City",
+      cityCount: {$avg: "$Salary"}
+    }
+  }
+])
+
+6. min
+db.col.aggregate([
+  {$group:{_id:"$City", cityCount:{$min:"$Salary"}}}
+])
+
+7. max
+db.col.aggregate([
+  {$group:{_id:"$City", cityCount:{$max:"$Salary"}}}
+])
+
+8. first
+db.col.aggregate([
+  {$group:{_id:"$City", cityCount:{$first:"$Salary"}}}
+])
+
+9. last
+db.col.aggregate([
+  {$group:{_id:"$City", cityCount:{$last:"$Salary"}}}
+])
+
+10. push
+db.col.aggregate([
+  {$group:{_id:"$City", cityCount:{$push:"$Salary"}}}
+])
+
+11. addtoSet
+db.col.aggregate([
+  {$group:{_id:"$City", cityCount:{$addToSet:"$Salary"}}}
+])
+

@@ -1,0 +1,104 @@
+1. to run these, right click and open with chorme
+2.  Save all the files in .html 
+
+Write a jQuery to create animation effect.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("button").click(function(){
+            $("img").animate({left:50});
+         })
+      })
+   </script>
+
+    <style>
+         img{
+            position:relative;
+         }
+    </style>
+</head>
+
+<body>
+   <p>Romal:239720</p>
+
+   <img src="Mountain.png" alt="Mountain Image"><br>
+
+   <br>
+   <button>Start Animation</button>
+</body>
+
+Write a jQuery to animate multiple CSS properties:
+<html>
+<head>
+
+<script src="jquery-3.6.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+   $("#b1").click(function(){
+
+      $("#div1").animate({
+          width:"150px",
+          height:"150px",
+          opacity:"0.5",
+          left:"150"
+      });
+
+   })
+})
+</script>
+
+<style>
+#div1{
+    width:100px;
+    height:100px;
+    background:yellow;
+    position:relative;
+}
+</style>
+
+</head>
+
+<body>
+
+<p>Animation</p>
+
+<div id="div1"></div>
+
+<button id="b1">Click to Animate</button>
+
+</body>
+</html>
+
+Write a jQuery to perform method of chaining.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("button").click(function(){
+            $("#p1")
+            .css("color","blue")
+            .slideUp(2000)
+            .slideDown(2000)
+         })
+      })
+   </script>
+</head>
+
+<body>
+
+   <p id="p1">Romal:239720</p>
+
+   <button>Click Me</button>
+
+</body>

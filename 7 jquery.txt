@@ -1,0 +1,292 @@
+1. Open one cmd  type mongod In another cmd type mongo.  
+2.  save all files in .html and run by right click on file and open with chrome
+
+1. Write a jQuery to check the contents of the elements on the button click:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic jQuery</title>
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+                document.write("Hello Aayush");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <p>Aayush: 239720</p>
+
+    <button id="btn">Click Me</button>
+
+</body>
+</html>
+
+3.  Write a jQuery to select elements by class name, id and element names:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic jQuery</title>
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".class1").css("background", "lightblue");
+
+            $("#id1").css("background", "pink");
+
+            $("h2").css("background", "lightgreen");
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <p class="class1">Aayush: 239720</p>
+
+    <p id="id1">Aayush</p>
+
+    <h2>Welcome Aayush</h2>
+
+</body>
+</html>
+
+4. Write jQuery to show the use of click(), hover(), on(), trigger(),off() events:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic jQuery</title>
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#b1").hover(function () {
+                document.write("Hello Aayush");
+            });
+
+            $("p").on("click", function () {
+                $(this).css("background", "yellow");
+            });
+
+            $("#b2").click(function () {
+                $("p").off("click");
+            });
+
+            $("#b3").click(function () {
+                $("#t1").hide();
+            });
+
+            $("input").select(function () {
+                $("input").after("Text Marked!");
+            });
+
+            $("#b4").click(function () {
+                $("input").trigger("select");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="b1">Hover</button><br>
+
+    <p>Welcome to Mulund College</p><br>
+
+    <p>Aayush: 239720</p><br>
+
+    <button id="b2">Off</button><br>
+
+    <p id="t1">Hello Aayush</p><br>
+
+    <button id="b3">On</button><br>
+
+    <input type="text" value="Aayush 239720"><br>
+
+    <button id="b4">Trigger</button><br>
+
+</body>
+</html>
+
+5. Write a jQuery to create animated show hide effect.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("#b1").click(function(){
+             $("p").hide();
+         });
+
+         $("#b2").click(function(){
+             $("p").show();
+         })
+      })
+   </script>
+</head>
+
+<body>
+   <p>Romal Shah:239720</p>
+
+   <button id="b1">Hide</button>
+   <button id="b2">Show</button>
+</body>
+
+6. Write a jQuery to create a simple toggle effect.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("button").click(function(){
+             $("p").toggle();
+         });
+      })
+   </script>
+</head>
+
+<body>
+    <p>Romal Shah:239720</p>
+    <button>Toggle</button>
+</body>
+
+7. Write a jQuery to create fade-in and fade-out effect.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $(".c1").click(function(){
+             $("p").fadeOut(5000);
+         });
+
+         $(".c2").click(function(){
+             $("p").fadeIn(5000);
+         })
+      })
+   </script>
+</head>
+
+<body>
+    <p>Romal Shah:239720</p>
+    <button class="c1">Fade Out</button>
+    <button class="c2">Fade In</button>
+</body>
+
+8. Write a jQuery to create fade toggle effect.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("button").click(function(){
+             $("p").fadeToggle(5000);
+         });
+      })
+   </script>
+</head>
+
+<body>
+    <p>Romal Shah:239720</p>
+    <button>Fade Toggles</button>
+</body>
+
+9. Write a jQuery to create slide-up and slide-down effect.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("#b1").click(function(){
+             $("p").slideUp(3000);
+         });
+
+         $("#b2").click(function(){
+             $("p").slideDown(3000);
+         })
+      })
+   </script>
+</head>
+
+<body>
+    <p>Romal Shah:239720</p>
+    <button id="b1">Slide Up</button>
+    <button id="b2">Slide Down</button>
+</body>
+
+10. Write a jQuery to create slide toggle effect.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("button").click(function(){
+            $("p").slideToggle(5000);
+         })
+      })
+   </script>
+</head>
+
+<body>
+    <p>Romal Shah:239720</p>
+    <button>Slide Toggle</button>
+</body>
+
+11. Write a jQuery to create Mouse Event.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic jQuery</title>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("#p1").mouseleave(function(){
+            alert("Bye! You now leave p1");
+         })
+      })
+   </script>
+</head>
+
+<body>
+    <p id="p1">This is a paragraph</p>
+</body>
+</html>
+
+Save all these in .html  

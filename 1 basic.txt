@@ -1,0 +1,63 @@
+mongo
+show dbs
+use aayush53
+ db.createCollection("Employeee")
+show collections
+ db.Employee.drop()
+db.createCollection("Employee")
+ db.Employee.insertOne({
+   name: "Aayush",
+     age: 20,
+     city: "Mumbai",
+     salary: 20000,
+     department: "Developer"
+})
+ 
+1. find
+db.Employee.find()
+
+2. upadte
+db.Employee.updateOne(
+    { name: "Aayush" },
+    { $set: { salary: 25000 } }
+)
+
+3. delete
+db.Employee.deleteOne({ name: "Aayush" })
+
+4. insert many
+db.Employee.insertMany([
+    {
+        name: "Aayush",
+        city: "Mumbai",
+        salary: 25000,
+        department: "Developer"
+    },
+    {
+        name: "Saloni",
+        city: "Kurla",
+        salary: 22000,
+        department: "Tester"
+    }
+])
+
+5. find, contitions
+5.1: db.Employee.find({ city: "Mumbai" })
+
+5.2 :db.Employee.find({
+    city: "Kurla",
+    salary: { $gt: 19000 }
+})
+
+5.3: db.Employee.find({
+    salary: {
+        $gte: 10000,
+        $lt: 20000
+    }
+})
+
+5.4: db.Employee.find({
+    city: { $in: ["Thane", "Mumbai"] },
+    salary: { $gt: 10000 }
+})
+

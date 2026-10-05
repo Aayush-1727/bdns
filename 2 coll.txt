@@ -1,0 +1,37 @@
+1. db.createCollection("Users")
+
+2. db.col.insertMany([
+  {Name:"Aayush", Age:20, Country:"India", Gender:"Female"},
+  {Name:"Tanu", Age:12, Country:"Russia", Gender:"Male"},
+  {Name:"Ravi", Age:25, Country:"USA", Gender:"Male"},
+  {Name:"Ajay", Age:65, Country:"India", Gender:"Female"},
+  {Name:"Hatim", Age:30, Country:"UAE", Gender:"Female"}
+])
+
+3. db.col.find()
+4. update
+db.col.updateMany(
+  {Gender:"Female"},
+  {$set:{Country:"UK"}}
+)
+
+5. condition of update
+db.col.updateMany(
+  {},
+  {$set:{company:"Wipro"}}
+)
+
+6. delete
+db.col.deleteMany({Gender:"Male"})
+
+7. Count
+db.col.countDocuments({
+  Gender: "Female",
+  Country: {$in: ["India", "USA"]}
+})
+
+8. Find Condition 
+db.col.find(
+  {Gender:"Female"},
+  {Name:1, Age:1, _id:0}
+)

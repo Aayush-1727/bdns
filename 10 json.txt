@@ -1,0 +1,94 @@
+1. to run these, right click and open with chorme
+2.  Save all the files in .html 
+
+1. Write a program to create JSON.
+
+<html>
+<head>
+<title>Creating JSON</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+     var data = {
+         "name":"Romal",
+         "age":20,
+         "dept":"IT"
+     }
+
+     document.writeln(JSON.stringify(data) + "</br>");
+
+     document.writeln(
+         JSON.stringify(data,["name","age","dept"]) + "<br/>"
+     );
+
+     document.writeln(
+         JSON.stringify(data,["name","age","dept"],5)
+     );
+
+</script>
+
+</body>
+</html>
+
+2. Write a program to parse JSON.:
+
+<html>
+<body>
+
+<script type="text/javascript">
+
+var data = '{"name":"Romal","age":20,"dept":"IT"}';
+
+var jsonObj = JSON.parse(data, function(name, value) {
+    return value;
+});
+
+document.writeln(jsonObj.name);
+
+for (key in jsonObj) {
+    document.writeln("<br/>" + key + " : " + jsonObj[key]);
+}
+
+var jsonObj = JSON.parse(data, function(name, value) {
+
+    if (name == "sem") {
+        return undefined;
+    } else {
+        return value;
+    }
+
+});
+
+for (key in jsonObj) {
+    document.writeln("<br/>" + key + " : " + jsonObj[key]);
+}
+
+</script>
+
+</body>
+</html>
+
+3. Write a program to parse JSON and display its key-value pairs.
+
+<html>
+<body>
+
+<script type="text/javascript">
+
+var data = '{"name":"Romal","age":20,"dept":"IT"}';
+
+var obj = JSON.parse(data);
+
+for(var key in obj)
+{
+    document.writeln("<br/>" + key + ":" + obj[key]);
+}
+
+</script>
+
+</body>
+</html>
+

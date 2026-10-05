@@ -1,0 +1,93 @@
+1. to run these, right click and open with chorme
+2.  Save all the files in .html 
+
+Write a jQuery effect method with a callback function.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+         $("button").click(function(){
+            $("p").hide("slow",function(){
+               alert("The paragraph is now hidden")
+            })
+         })
+      })
+   </script>
+</head>
+
+<body>
+   <p>Romal:239720</p>
+   <p>Welcome to MCC</p>
+
+   <button>Click!</button>
+</body>
+
+Write a jQuery to get and set text context of the elements.:
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+         $("#b1").click(function(){
+            var str = $("p").text();
+            alert(str);
+         })
+
+         $("#b2").click(function(){
+            $("p").text("Hello World");
+         })
+
+      })
+   </script>
+</head>
+
+<body>
+     <p>Romal Shah:239720</p>
+     <p> MongoDB</p>
+
+     <button id="b1">Get</button>
+     <button id="b2">Set</button>
+</body>
+
+Write a jQuery to get and set HTML contents of the elements.
+
+<!DOCTYPE html>
+<head>
+    <title>Basic jQuery</title>
+
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+         $("#b1").click(function(){
+            var str = $("p").html();
+            alert(str);
+         })
+
+         $("#b2").click(function(){
+            $("p").html("<b>Hello World<b>");
+         })
+
+      })
+   </script>
+</head>
+
+<body>
+    <p><b>Romal Shah:</b><u>239720</u></p>
+    <p>MongoDB</p>
+
+    <button id="b1">Get</button>
+    <button id="b2">Set</button>
+</body>
+
